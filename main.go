@@ -2,13 +2,14 @@ package main
 
 import (
 	"github.com/joeyparsons/advent-kube/handlers"
+	"github.com/joeyparsons/advent-kube/version"
 	"log"
 	"net/http"
 	"os"
 )
 
 func main() {
-	log.Print("Starting the service...\ncommit: %s, build time: %s, release: %s",
+	log.Printf("Starting the service...\ncommit: %s, build time: %s, release: %s",
 		version.Commit, version.BuildTime, version.Release,
 	)
 
