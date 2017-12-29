@@ -8,7 +8,9 @@ import (
 )
 
 func main() {
-	log.Print("Starting the service...")
+	log.Print("Starting the service...\ncommit: %s, build time: %s, release: %s",
+		version.Commit, version.BuildTime, version.Release,
+	)
 
 	port := os.Getenv("PORT")
 	if port == "" {
